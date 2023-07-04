@@ -27,8 +27,8 @@ const { createApp } = Vue
                     this.error=true              
                 })
         },
-        eliminar(PickUps) {
-            const url = this.url+'/' + PickUps;
+        eliminar(PickUp) {
+            const url = this.url+'/' + PickUp;
             var options = {
                 method: 'DELETE',
             }
