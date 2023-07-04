@@ -12,7 +12,7 @@
     </header>
     <main>
         <div id="app" class="container">
-            <h1>Productos</h1>
+            <h1>PickUps</h1>
             <br>
             <a  class="btn btn-primary" href="pickup_nueva.html">Nueva</a>
             <br><br>
@@ -38,17 +38,17 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class=""  v-for="producto in productos">
-                                    <td scope="row">{{producto.id}}</td>
-                                    <td>{{producto.nombre}}</td>
-                                    <td>{{producto.precio}}</td>
-                                    <td>{{producto.stock}}</td>
+                                <tr class=""  v-for="PickUp in PickUps">
+                                    <td scope="row">{{PickUp.id}}</td>
+                                    <td>{{PickUp.nombre}}</td>
+                                    <td>{{PickUp.precio}}</td>
+                                    <td>{{PickUp.stock}}</td>
                                     <td>
-                                        <img width="60"  :src="producto.imagen" :alt="producto.nombre">
+                                        <img width="60"  :src="PickUp.imagen" :alt="PickUp.nombre">
                                     </td>
                                     <td>
-                    			<a class="btn btn-primary" :href="'pickup_update.html?id='+ producto.id" >Editar</a>
-                                      <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)" >Eliminar</button>
+                    			<a class="btn btn-primary" :href="'pickup_update.html?id='+ PickUp.id" >Editar</a>
+                                      <button type="button" class="btn btn-danger" v-on:click="eliminar(PickUp.id)" >Eliminar</button>
                                     </td>
                                 </tr>
                             </tbody>
