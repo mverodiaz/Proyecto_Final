@@ -1,0 +1,8 @@
+.header {
+    grid-area: header;
+    justify-content: center;
+    align-content: center;
+    background-color: #eb7608;
+    font-family:'Barlow Condensed', sans-serif;
+    margin-right: 10px;
+}
