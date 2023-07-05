@@ -68,10 +68,10 @@ def get_PickUp(id):
 
 @app.route('/pickups/<id>',methods=['DELETE'])
 def delete_PickUp(id):
-    PickUp=PickUp.query.get(id)
-    db.session.delete(PickUp)
+    pickup=PickUp.query.get(id)
+    db.session.delete(pickup)
     db.session.commit()
-    return PickUp_schema.jsonify(PickUp)   # me devuelve un json con el registro eliminado
+    return PickUp_schema.jsonify(pickup)   # me devuelve un json con el registro eliminado
 
 
 @app.route('/pickups', methods=['POST']) # crea ruta o endpoint
@@ -89,16 +89,16 @@ def create_PickUp():
 
 @app.route('/pickups/<id>' ,methods=['PUT'])
 def update_PickUp(id):
-    PickUp=PickUp.query.get(id)
+    pickup=PickUp.query.get(id)
  
-    PickUp.nombre=request.json['nombre']
-    PickUp.precio=request.json['precio']
-    PickUp.stock=request.json['stock']
-    PickUp.imagen=request.json['imagen']
+    pickup.nombre=request.json['nombre']
+    pickup.precio=request.json['precio']
+    pickup.stock=request.json['stock']
+    pickup.imagen=request.json['imagen']
 
 
     db.session.commit()
-    return PickUp_schema.jsonify(PickUp)
+    return PickUp_schema.jsonify(pickup)
 
 #Programa Principal
 if __name__ == '__main__':
