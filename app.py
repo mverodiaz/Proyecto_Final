@@ -60,8 +60,8 @@ def get_PickUps():
 
 @app.route('/pickups/<id>',methods=['GET'])
 def get_PickUp(id):
-    PickUp=PickUp.query.get(id)
-    return PickUp_schema.jsonify(PickUp)   # retorna el JSON de un producto recibido como parametro
+    pickup=PickUp.query.get(id)
+    return PickUp_schema.jsonify(pickup)   # retorna el JSON de un producto recibido como parametro
 
 
 
