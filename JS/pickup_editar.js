@@ -8,8 +8,8 @@ const { createApp } = Vue
         id:0,
         nombre:"",
         imagen:"",
-        stock:0,
-        precio:0,
+        stock:"",
+        precio:"",
         url:'http://localhost:5000/pickups/'+id,
        }  
     },

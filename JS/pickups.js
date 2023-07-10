@@ -10,8 +10,8 @@ const { createApp } = Vue
         id:0,
         nombre:"", 
         imagen:"",
-        stock:0,
-        precio:0,
+        stock:"",
+        precio:"",
     }  
     },
     methods: {
@@ -28,6 +28,9 @@ const { createApp } = Vue
                 })
         },
         eliminar(PickUp) {
+            if (!confirm("¿Confirma que desea eliminar este registro?")){
+                return;
+            }
             const url = this.url+'/' + PickUp;
             var options = {
                 method: 'DELETE',

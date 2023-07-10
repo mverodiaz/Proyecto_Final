@@ -1,8 +1,28 @@
-.header {
-    grid-area: header;
+body {
     justify-content: center;
     align-content: center;
-    background-color: #eb7608;
+    background-color: #90b9e7;
     font-family:'Barlow Condensed', sans-serif;
     margin-right: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f0b074;
+    font-family:'Barlow Condensed', sans-serif;
+    font-size: medium;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-family:'Barlow Condensed', sans-serif;
+    margin-right: 10px;
+    margin-left: 20px;
 }
